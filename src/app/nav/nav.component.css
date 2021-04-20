@@ -5,3 +5,17 @@
 .example-spacer {
   flex: 1 1 auto;
 }
+
+mat-toolbar {
+  color:whitesmoke;
+  background-color: black;
+}
+
+mat-sidenav {
+  color:black;
+  background-color: yellow;
+}
+
+mat-toolbar-row .bjLogo {
+width: 7%;
+}
