@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "beitar-1936": {
+      "hosting": {
+        "beitar": [
+          "beitar-1936"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "beitar-1936"
+  }
+}
