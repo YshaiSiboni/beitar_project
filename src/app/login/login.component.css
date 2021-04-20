@@ -1,0 +1,58 @@
+.img-container .stadiumWall {
+    width: 100vw;
+    height: 100vh;
+    opacity: 0.5;
+    }
+  
+.img-container {
+  position: relative;
+  text-align: center;
+}
+  
+.centered {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card {
+    background: #fbfbfb;
+    border-radius: 8px;
+    box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.65);
+    height: 340px;
+    margin: 6rem auto 8.1rem auto;
+    width: 329px;
+}
+
+.loginHeader {
+  font-family: "Raleway Thin", sans-serif;
+  letter-spacing: 4px;
+  padding-bottom: 5px;
+  padding-top: 13px;
+  text-align: center;
+}
+
+.underline-login {
+  background: -webkit-linear-gradient(right, #f5f77b, #c0b62e);
+  height: 2px;
+  margin: -1.1rem auto 0 auto;
+  width: 89px;
+}
+
+.login-button {
+  background: -webkit-linear-gradient(right, #f5f77b, #c0b62e);
+  border: none;
+  border-radius: 21px;
+  box-shadow: 0px 1px 8px #f5f77b;
+  cursor: pointer;
+  color: black;
+  font-family: "Raleway SemiBold", sans-serif;
+  height: 42.3px;
+  margin: 0 auto;
+  transition: 0.25s;
+  width: 153px;
+}
+.login-button:hover {
+  box-shadow: 0px 1px 18px #f5f77b;
+}

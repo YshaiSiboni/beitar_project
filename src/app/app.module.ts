@@ -36,12 +36,13 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatMenuModule} from '@angular/material/menu';
-
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavComponent
+    NavComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
