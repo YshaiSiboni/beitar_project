@@ -1,19 +1,18 @@
 <div style="height: 100%;">
   <mat-toolbar>
     <mat-toolbar-row>
-      <button mat-icon-button (click)="sidenav.toggle()" fxShow="true" fxHide.gt-sm>
+      <button mat-icon-button (click)="sidenav.toggle()" fxShow="true" *ngIf = "(auth.getUser() | async)">
         <mat-icon>menu</mat-icon>
       </button>
       <span><img src="https://firebasestorage.googleapis.com/v0/b/beitar-1936.appspot.com/o/BJFClogo.png?alt=media&token=aabaa91c-afeb-4f00-a5fc-37f068c80379" class="bjLogo"></span>
       <span class="example-spacer"></span>
-      <div fxShow="true" fxHide.lt-md="true">
+      <div fxShow="true" fxHide.lt-md="false">
         <!-- The following menu items will be hidden on both SM and XS screen sizes -->
         <a *ngIf = "(auth.getUser() | async)"><button mat-button [matMenuTriggerFor]="userName">
           <mat-icon>account_box</mat-icon>
           My Account
         </button></a>
         <mat-menu #userName="matMenu">
-          <button mat-menu-item ><a routerLink="/login">My Account</a></button>
           <button mat-menu-item><a (click) = "auth.logout()">Logout</a></button>
         </mat-menu>
       </div>
@@ -37,7 +36,7 @@
         </a>
         <a href="#" mat-list-item>
           <mat-icon>lock</mat-icon>
-          My Account
+          xxxx
         </a>
       </mat-nav-list>
     </mat-sidenav>

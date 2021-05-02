@@ -1,0 +1,21 @@
+.img-container .stadiumWall {
+    width: 100%;
+    height: 100vh;
+    opacity: 0.7;
+}
+/* Container holding the image and the text */
+.img-container {
+  position: relative;
+  text-align: left;
+}
+
+/* Top left text */
+.top-left {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  color: #f5eb61;
+  font-family: 'Trebuchet MS', sans-serif;
+  font-weight: bold;
+  font-size: 35px;
+}

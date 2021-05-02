@@ -37,12 +37,14 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatMenuModule} from '@angular/material/menu';
 import { LoginComponent } from './login/login.component';
+import { WelcomeComponent } from './welcome/welcome.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
-    LoginComponent
+    LoginComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,
