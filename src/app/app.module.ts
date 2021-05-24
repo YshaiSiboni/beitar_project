@@ -38,13 +38,17 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatMenuModule} from '@angular/material/menu';
 import { LoginComponent } from './login/login.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { SaleComponent } from './sale/sale.component';
+import { AccountComponent } from './account/account.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
     LoginComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    SaleComponent,
+    AccountComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,34 @@
+.img-container .stadiumWall {
+    width: 100%;
+    height: 100vh;
+    opacity: 0.7;
+    }
+  
+.img-container {
+  position: relative;
+  text-align: center;
+}
+  
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.centered table {
+  width:100%;
+  table-layout: fixed;
+  overflow-wrap: break-word;
+}
+
+.top-left .filter{
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  background-color: white;
+}
+
+th.mat-sort-header-sorted {
+  color: black;
+}
