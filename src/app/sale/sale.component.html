@@ -1,6 +1,14 @@
 <div class="img-container">
     <img src="https://firebasestorage.googleapis.com/v0/b/beitar-1936.appspot.com/o/teddy1.jpg?alt=media&token=49123895-6344-4891-9011-ddb110f70c7f"
         class="stadiumWall">
+        <div class="top-left">
+          <div class="filter">
+              <mat-form-field>
+                  <mat-label>Filter</mat-label>
+                  <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Ex. text">
+              </mat-form-field>
+          </div>
+      </div>
     <div class="centered">
         <form class="date-block" [formGroup]="filterForm">
             <div class="date-block__list">
@@ -27,43 +35,44 @@
            <button mat-button class = "refresh" [routerLink]="['/sales']" (click)="refreshTable()">Reset</button>
         </form>
         
-        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort>
         
-          <!-- Position Column -->
+          <!-- 
           <ng-container matColumnDef="account_id">
             <th mat-header-cell *matHeaderCellDef> account id </th>
             <td mat-cell *matCellDef="let element"> {{element.account_id}} </td>
           </ng-container>
         
-          <!-- Name Column -->
+          
           <ng-container matColumnDef="doctype">
             <th mat-header-cell *matHeaderCellDef> doctype </th>
             <td mat-cell *matCellDef="let element"> {{element.doctype}} </td>
-          </ng-container>
+          </ng-container> -->
         
-          <!-- Weight Column -->
+          <!-- Name Column -->
           <ng-container matColumnDef="company">
             <th mat-header-cell *matHeaderCellDef> Name </th>
             <td mat-cell *matCellDef="let element"> {{element.company}} </td>
           </ng-container>
         
-          <!-- Symbol Column -->
+          <!-- Issue Date Column -->
           <ng-container matColumnDef="issue_date">
-            <th mat-header-cell *matHeaderCellDef> Issue Date </th>
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Issue Date </th>
             <td mat-cell *matCellDef="let element"> {{element.issue_date | date: 'dd/MM/yyyy'}} </td>
           </ng-container>
         
-           <!-- Founded Column -->
+           <!-- Total Column -->
           <ng-container matColumnDef="total">
             <th mat-header-cell *matHeaderCellDef> Total </th>
-            <td mat-cell *matCellDef="let element"> {{element.total}} </td>
+            <td mat-cell *matCellDef="let element"> {{element.total | currency:"ILS":"symbol"}} </td>
           </ng-container>
           
+          <!-- 
           <ng-container matColumnDef="currency_id">
             <th mat-header-cell *matHeaderCellDef> Currency </th>
             <td mat-cell *matCellDef="let element"> {{element.currency_id}} </td>
-          </ng-container> 
-<!--
+          </ng-container>
+
           <ng-container matColumnDef="name">
             <th mat-header-cell *matHeaderCellDef> Name </th>
             <td mat-cell *matCellDef="let element"> {{element.docDetailes.name}} </td>

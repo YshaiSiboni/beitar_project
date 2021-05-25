@@ -1,3 +1,4 @@
+import { element } from 'protractor';
 import { SaleService } from './../sale.service';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { SaleByCustomer } from '../interfaces/sale-by-customer';
@@ -5,6 +6,7 @@ import { MatTableDataSource } from '@angular/material/table';
 import { DatePipe, formatDate } from '@angular/common';
 import { FormControl, FormGroup } from '@angular/forms';
 import { MatPaginator } from '@angular/material/paginator';
+import { MatSort, MatSortable } from '@angular/material/sort';
 
 @Component({
   selector: 'app-sale',
@@ -15,9 +17,10 @@ export class SaleComponent implements OnInit {
 
   resp;
   ELEMENT_DATA: SaleByCustomer[] = [];
-  displayedColumns: string[] = ['account_id', 'doctype', 'company', 'issue_date', 'total', 'currency_id'];
+  displayedColumns: string[] = ['company', 'issue_date', 'total'];
   dataSource = new MatTableDataSource<SaleByCustomer>(this.ELEMENT_DATA);
   @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
+  @ViewChild(MatSort,{static:true}) sort:MatSort;
   pipe: DatePipe;
 
 
@@ -68,6 +71,8 @@ export class SaleComponent implements OnInit {
       data => {
         this.dataSource = new MatTableDataSource<SaleByCustomer>(data.body as SaleByCustomer[]);
         this.dataSource.paginator = this.paginator;
+        this.sort.sort(({ id: 'issue_date', start: 'desc'}) as MatSortable);
+        this.dataSource.sort = this.sort;
         console.log(this.dataSource);
         console.log(this.dataSource.data);
       }
