@@ -17,11 +17,14 @@ export class SaleComponent implements OnInit {
 
   resp;
   ELEMENT_DATA: SaleByCustomer[] = [];
-  displayedColumns: string[] = ['company', 'issue_date', 'total'];
+  displayedColumns: string[] = ['doctype','owner','company', 'issue_date', 'total'];
   dataSource = new MatTableDataSource<SaleByCustomer>(this.ELEMENT_DATA);
   @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
   @ViewChild(MatSort,{static:true}) sort:MatSort;
   pipe: DatePipe;
+
+  docDict = {3: "מס", 9:"מס - קבלה"};
+  ownerDict = {3741: "בית וגן", 3480: "חנות אינטרנט", 3740: "טדי מערבי", 3739: "טדי מזרחי", 3841: "בית וגן"};
 
 
   filterForm = new FormGroup({

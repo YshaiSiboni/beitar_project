@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { MatTableDataSource } from '@angular/material/table';
 import { Account } from '../interfaces/account';
 import { MatPaginator } from '@angular/material/paginator';
-import { MatSort } from '@angular/material/sort';
+import { MatSort, MatSortable } from '@angular/material/sort';
 
 
 @Component({
@@ -44,6 +44,7 @@ export class AccountComponent implements OnInit {
       data => {
         this.dataSource = new MatTableDataSource<Account>(data.body as Account[]);
         this.dataSource.paginator = this.paginator;
+        this.sort.sort(({ id: 'name', start: 'asc'}) as MatSortable);
         this.dataSource.sort = this.sort;
         console.log(this.dataSource);
       }
