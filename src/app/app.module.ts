@@ -40,6 +40,8 @@ import { LoginComponent } from './login/login.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { SaleComponent } from './sale/sale.component';
 import { AccountComponent } from './account/account.component';
+import { BarChartComponent } from './bar-chart/bar-chart.component';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 @NgModule({
   declarations: [
@@ -48,7 +50,8 @@ import { AccountComponent } from './account/account.component';
     LoginComponent,
     WelcomeComponent,
     SaleComponent,
-    AccountComponent
+    AccountComponent,
+    BarChartComponent
   ],
   imports: [
     BrowserModule,
@@ -80,7 +83,8 @@ import { AccountComponent } from './account/account.component';
     MatStepperModule,
     ReactiveFormsModule,
     FlexLayoutModule,
-    MatMenuModule
+    MatMenuModule,
+    NgxChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
