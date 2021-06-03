@@ -42,6 +42,7 @@ import { SaleComponent } from './sale/sale.component';
 import { AccountComponent } from './account/account.component';
 import { BarChartComponent } from './bar-chart/bar-chart.component';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { BarChartCompareComponent } from './bar-chart-compare/bar-chart-compare.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
     WelcomeComponent,
     SaleComponent,
     AccountComponent,
-    BarChartComponent
+    BarChartComponent,
+    BarChartCompareComponent
   ],
   imports: [
     BrowserModule,

@@ -7,11 +7,6 @@ import { SaleService } from '../sale.service';
   styleUrls: ['./bar-chart.component.css']
 })
 export class BarChartComponent implements OnInit {
-  saleData = [
-    { name: "Mobiles", value: 105000 },
-    { name: "Laptop", value: 55000 }
-  ];
-
   countA = 0; // Internet Shop - 3480
   countB = 0; // Bait Vegan Shop - 3741 or 3841
   countC = 0; // Teddy East - 3739
