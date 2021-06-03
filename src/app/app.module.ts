@@ -43,6 +43,8 @@ import { AccountComponent } from './account/account.component';
 import { BarChartComponent } from './bar-chart/bar-chart.component';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { BarChartCompareComponent } from './bar-chart-compare/bar-chart-compare.component';
+import { PieChartComponent } from './pie-chart/pie-chart.component';
+import { BarChartMonthComponent } from './bar-chart-month/bar-chart-month.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +55,9 @@ import { BarChartCompareComponent } from './bar-chart-compare/bar-chart-compare.
     SaleComponent,
     AccountComponent,
     BarChartComponent,
-    BarChartCompareComponent
+    BarChartCompareComponent,
+    PieChartComponent,
+    BarChartMonthComponent
   ],
   imports: [
     BrowserModule,

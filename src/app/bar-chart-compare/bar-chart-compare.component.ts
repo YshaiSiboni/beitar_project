@@ -43,7 +43,7 @@ export class BarChartCompareComponent implements OnInit {
           for (let i = 0; i < dataCompare.length; i++) {
             dataCompare[i][0] = formatDate(dataCompare[i][0], 'yyyy-MM-dd','en-US')
           }
-          console.log(dataCompare);
+          //console.log(dataCompare);
           for (let i = 0; i < dataCompare.length; i++) {
             if (dataCompare[i][0] == finalToday) {
               this.countToday = this.countToday + 1;
@@ -61,14 +61,12 @@ export class BarChartCompareComponent implements OnInit {
           )
 
           this.saleTotal.push(
-            { name: `Today Sales ${finalToday}`, value: this.sumToday },
-            { name: `Yesterday Sales ${finalYesterday}`, value: this.sumYesterday },
+            { name: `${finalToday}`, value: this.sumToday },
+            { name: `${finalYesterday}`, value: this.sumYesterday },
           )
           this.dataReceived = true;
-          /*console.log(this.countToday);
-          console.log(this.sumToday);
-          console.log(this.countYesterday);
-          console.log(this.sumYesterday);*/
+          console.log(this.saleCount);
+          console.log(this.saleTotal);
           console.log(this.dataReceived);
         }
       )

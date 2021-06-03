@@ -2,11 +2,10 @@
     <img src="https://firebasestorage.googleapis.com/v0/b/beitar-1936.appspot.com/o/teddy1.jpg?alt=media&token=49123895-6344-4891-9011-ddb110f70c7f"
         class="stadiumWall">
     <div class="centered">
-        <ngx-charts-bar-vertical *ngIf = "dataReceived"
-        [results]="ownerCount"
+        <ngx-charts-bar-vertical *ngIf="dataReceived"
+        [results]="saleMonthTotal"
         [view]="[1000,400]" 
-        [scheme]="colorScheme"
-        [xAxisLabel]="'Area'"
+        [xAxisLabel]="'Month'"
         [legendTitle]="'Sale Area Chart'" 
         [yAxisLabel]="'Sale Count'" 
         [legend]="true" 
