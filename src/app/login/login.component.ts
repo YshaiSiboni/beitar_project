@@ -18,7 +18,7 @@ export class LoginComponent implements OnInit {
     this.auth.login(this.email,this.password)
     .then(res => {
       console.log('Succesful Login',res);
-      this.router.navigate(['/welcome']);
+      this.router.navigate(['/home']);
     }
     )
     .catch(error => {

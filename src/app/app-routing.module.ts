@@ -13,7 +13,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 const routes: Routes = [
   { path: '', component: LoginComponent },
   { path: 'navbar', component: NavComponent },
-  { path: 'welcome', component: WelcomeComponent },
+  { path: 'home', component: WelcomeComponent },
   { path: 'sales', component: SaleComponent },
   { path: 'accounts', component: AccountComponent },
   { path: 'barChart', component: BarChartComponent },

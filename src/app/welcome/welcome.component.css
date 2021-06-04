@@ -19,3 +19,15 @@
   font-weight: bold;
   font-size: 35px;
 }
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+mat-card {
+  width:fit-content;
+  height: fit-content;
+}
