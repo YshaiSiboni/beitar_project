@@ -1,0 +1,32 @@
+<div class="grid-container">
+  <h1 class="mat-h1">Welcome {{(user | async)?.email.split("@")[0]}}</h1>
+  <mat-grid-list cols="{{ ( cardLayout | async )?.columns }}" rowHeight="200px">
+    <!--Charts-->
+    <mat-grid-tile [colspan]="( cardLayout | async )?.chart.cols" [rowspan]="( cardLayout | async )?.chart.rows">
+      <app-card title="Revenue compared to previous month">
+        <app-bar-chart-month></app-bar-chart-month>
+      </app-card>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="( cardLayout | async )?.chart.cols" [rowspan]="( cardLayout | async )?.chart.rows">
+      <app-card title="Revenue compared to previous day">
+        <app-bar-chart-compare></app-bar-chart-compare>
+      </app-card>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="( cardLayout | async )?.chart.cols" [rowspan]="( cardLayout | async )?.chart.rows">
+      <app-card title="Sales by Store">
+        <app-bar-chart></app-bar-chart>
+      </app-card>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="( cardLayout | async )?.chart.cols" [rowspan]="( cardLayout | async )?.chart.rows">
+      <app-card title="Monthly Revenue">
+        <app-pie-chart></app-pie-chart>
+      </app-card>
+    </mat-grid-tile>
+    <!--Table-->
+    <mat-grid-tile [colspan]="( cardLayout | async )?.table.cols" [rowspan]="( cardLayout | async )?.table.rows">
+      <app-card title="Sales in the last two days">
+        <app-table-day></app-table-day>
+      </app-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

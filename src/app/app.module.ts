@@ -45,6 +45,10 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { BarChartCompareComponent } from './bar-chart-compare/bar-chart-compare.component';
 import { PieChartComponent } from './pie-chart/pie-chart.component';
 import { BarChartMonthComponent } from './bar-chart-month/bar-chart-month.component';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { DashHomeComponent } from './dash-home/dash-home.component';
+import { CardComponent } from './card/card.component';
+import { TableDayComponent } from './table-day/table-day.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +61,10 @@ import { BarChartMonthComponent } from './bar-chart-month/bar-chart-month.compon
     BarChartComponent,
     BarChartCompareComponent,
     PieChartComponent,
-    BarChartMonthComponent
+    BarChartMonthComponent,
+    DashHomeComponent,
+    CardComponent,
+    TableDayComponent
   ],
   imports: [
     BrowserModule,
@@ -90,7 +97,8 @@ import { BarChartMonthComponent } from './bar-chart-month/bar-chart-month.compon
     ReactiveFormsModule,
     FlexLayoutModule,
     MatMenuModule,
-    NgxChartsModule
+    NgxChartsModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

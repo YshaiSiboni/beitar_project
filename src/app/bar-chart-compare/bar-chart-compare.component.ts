@@ -56,13 +56,13 @@ export class BarChartCompareComponent implements OnInit {
           }
           
           this.saleCount.push(
-            { name: `Today Sales ${finalToday}`, value: this.countToday },
             { name: `Yesterday Sales ${finalYesterday}`, value: this.countYesterday },
+            { name: `Today Sales ${finalToday}`, value: this.countToday },
           )
 
           this.saleTotal.push(
-            { name: `${finalToday}`, value: this.sumToday },
             { name: `${finalYesterday}`, value: this.sumYesterday },
+            { name: `${finalToday}`, value: this.sumToday },
           )
           this.dataReceived = true;
           console.log(this.saleCount);

@@ -61,8 +61,8 @@ export class BarChartMonthComponent implements OnInit {
             }
           }
           this.saleMonthTotal.push(
-            { name: `${mNames[currMonthNo]} Sales`, value: this.sumCurrMonth },
             { name: `${mNames[lastMonthNo]} Sales `, value: this.sumLastMonth },
+            { name: `${mNames[currMonthNo]} Sales`, value: this.sumCurrMonth },
           )
           this.dataReceived = true;
           console.log(this.saleMonthTotal);

@@ -1,4 +1,4 @@
-<div class="img-container">
+<!--<div class="img-container">
     <img src="https://firebasestorage.googleapis.com/v0/b/beitar-1936.appspot.com/o/teddy1.jpg?alt=media&token=49123895-6344-4891-9011-ddb110f70c7f"
         class="stadiumWall">
     <div class="centered">
@@ -7,4 +7,8 @@
             [showXAxisLabel]="true" [showYAxisLabel]="true" [xAxis]="true" [yAxis]="true" [gradient]="true">
         </ngx-charts-bar-vertical>
     </div>
-</div>
+</div>-->
+<ngx-charts-bar-vertical *ngIf="dataReceived" [results]="saleMonthTotal" [xAxisLabel]="'Month'"
+    [yAxisLabel]="'Sale Count'" [showXAxisLabel]="true"
+    [showYAxisLabel]="true" [xAxis]="true" [yAxis]="true" [gradient]="true">
+</ngx-charts-bar-vertical>

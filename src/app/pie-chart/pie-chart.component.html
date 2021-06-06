@@ -1,4 +1,4 @@
-<div class="img-container">
+<!--<div class="img-container">
     <img src="https://firebasestorage.googleapis.com/v0/b/beitar-1936.appspot.com/o/teddy1.jpg?alt=media&token=49123895-6344-4891-9011-ddb110f70c7f"
         class="stadiumWall">
     <div class="centered">
@@ -6,4 +6,7 @@
             [legendTitle]="'Month Sale Report'" [view]="[1000,300]" [labels]="true">
         </ngx-charts-pie-chart>
     </div>
-</div>
+</div>-->
+<ngx-charts-pie-chart *ngIf="dataReceived" [results]="saleMonthTotal"
+    [labels]="true">
+</ngx-charts-pie-chart>
