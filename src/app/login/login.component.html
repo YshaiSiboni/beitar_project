@@ -1,40 +1,35 @@
-<div class="img-container">
-    <img src="https://firebasestorage.googleapis.com/v0/b/beitar-1936.appspot.com/o/teddy1.jpg?alt=media&token=49123895-6344-4891-9011-ddb110f70c7f"
-        class="stadiumWall">
-    <div class="centered">
-        <div class="card">
-            <div class="loginHeader">
-                <h1>Login</h1>
-                <div class="underline-login"></div>
-            </div>
-            <form #LoginForm="ngForm" (ngSubmit)="onSubmit()">
-                <div class="example-container">
-                    <p>
-                        <mat-form-field appearance="standard">
-                            <mat-label>Email</mat-label>
-                            <input matInput placeholder="example: you@you.com" [(ngModel)]="email" name="email"
-                                required>
-                            <mat-hint>The one you used to sign-up</mat-hint>
-                        </mat-form-field>
-                    </p>
-                    <p>
-                        <mat-form-field appearance="standard">
-                            <mat-label>Password</mat-label>
-                            <input matInput placeholder="example:42343@@##aZ" [(ngModel)]="password" name="password"
-                                type="password" required>
-                            <mat-hint>8 chracters or more</mat-hint>
-                        </mat-form-field>
-                        <mat-error *ngIf="isError">
-                            {{errorMessage}}
-                        </mat-error>
-                    </p>
-                    <div>
-                        <button mat-raised-button class="login-button" [disabled]="!LoginForm.form.valid">
-                            Login
-                        </button>
-                    </div>
-                </div>
-            </form>
+<div class="centered">
+    <div class="card">
+        <div class="loginHeader">
+            <h1>Login</h1>
+            <div class="underline-login"></div>
         </div>
+        <form #LoginForm="ngForm" (ngSubmit)="onSubmit()">
+            <div class="example-container">
+                <p>
+                    <mat-form-field appearance="standard">
+                        <mat-label>Email</mat-label>
+                        <input matInput placeholder="example: you@you.com" [(ngModel)]="email" name="email" required>
+                        <mat-hint>The one you used to sign-up</mat-hint>
+                    </mat-form-field>
+                </p>
+                <p>
+                    <mat-form-field appearance="standard">
+                        <mat-label>Password</mat-label>
+                        <input matInput placeholder="example:42343@@##aZ" [(ngModel)]="password" name="password"
+                            type="password" required>
+                        <mat-hint>8 chracters or more</mat-hint>
+                    </mat-form-field>
+                    <mat-error *ngIf="isError">
+                        {{errorMessage}}
+                    </mat-error>
+                </p>
+                <div>
+                    <button mat-raised-button class="login-button" [disabled]="!LoginForm.form.valid">
+                        Login
+                    </button>
+                </div>
+            </div>
+        </form>
     </div>
 </div>

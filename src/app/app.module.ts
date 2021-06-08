@@ -49,6 +49,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { DashHomeComponent } from './dash-home/dash-home.component';
 import { CardComponent } from './card/card.component';
 import { TableDayComponent } from './table-day/table-day.component';
+import {MatDialogModule} from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -98,7 +99,8 @@ import { TableDayComponent } from './table-day/table-day.component';
     FlexLayoutModule,
     MatMenuModule,
     NgxChartsModule,
-    MatGridListModule
+    MatGridListModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

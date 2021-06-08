@@ -1,3 +1,4 @@
+import { map } from 'rxjs/operators';
 import { SaleCompareDaysService } from './../sale-compare-days.service';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { SaleByCustomer } from '../interfaces/sale-by-customer';
@@ -24,6 +25,13 @@ export class TableDayComponent implements OnInit {
 
 
   constructor(private saleCompareDaysService: SaleCompareDaysService) { }
+
+ /* getDetails(index) {
+    this.saleCompareDaysService.getSale().subscribe((results) => {
+      let data = results[index];
+      console.log(data);
+    })
+}*/
 
   ngOnInit(): void {
   }

@@ -20,7 +20,7 @@ const routes: Routes = [
   { path: 'accounts', component: AccountComponent },
   //{ path: 'barChart', component: BarChartComponent },
   //{ path: 'barChartCompare', component: BarChartCompareComponent },
-  //{ path: 'pieChart', component: PieChartComponent },
+  { path: 'pieChart', component: PieChartComponent },
   //{ path: 'barChartMonth', component: BarChartMonthComponent },
   //{ path: 'day', component: TableDayComponent },
   { path: 'home', component: DashHomeComponent },

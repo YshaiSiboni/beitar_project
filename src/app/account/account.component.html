@@ -1,58 +1,56 @@
 <div class="img-container">
-    <img src="https://firebasestorage.googleapis.com/v0/b/beitar-1936.appspot.com/o/teddy1.jpg?alt=media&token=49123895-6344-4891-9011-ddb110f70c7f"
-        class="stadiumWall">
-        <div class="top-left">
-            <div class="filter">
-                <mat-form-field>
-                    <mat-label>Filter</mat-label>
-                    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Ex. text">
-                </mat-form-field>
-            </div>
+    <div class="top-left">
+        <div class="filter">
+            <mat-form-field>
+                <mat-label>Filter</mat-label>
+                <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Ex. text">
+            </mat-form-field>
         </div>
+    </div>
     <div class="centered">
         <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort>
 
-    <!--- Note that these columns can be defined in any order.
+            <!--- Note that these columns can be defined in any order.
                   The actual rendered columns are set as a property on the row definition" -->
-    <!-- Name -->
-    <ng-container matColumnDef="name">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
-        <td mat-cell *matCellDef="let element">
-            <span> {{element.name}} </span>
-        </td>
-    </ng-container>
+            <!-- Name -->
+            <ng-container matColumnDef="name">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
+                <td mat-cell *matCellDef="let element">
+                    <span> {{element.name}} </span>
+                </td>
+            </ng-container>
 
-    <!-- Email -->
-    <ng-container matColumnDef="email">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Email </th>
-        <td mat-cell *matCellDef="let element">
-            <span> {{element.email}} </span>
-        </td>
-    </ng-container>
+            <!-- Email -->
+            <ng-container matColumnDef="email">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Email </th>
+                <td mat-cell *matCellDef="let element">
+                    <span> {{element.email}} </span>
+                </td>
+            </ng-container>
 
-    <!-- Phone -->
-    <ng-container matColumnDef="phone">
-        <th mat-header-cell *matHeaderCellDef> Phone </th>
-        <td mat-cell *matCellDef="let element"> {{element.phone}} </td>
-    </ng-container>
+            <!-- Phone -->
+            <ng-container matColumnDef="phone">
+                <th mat-header-cell *matHeaderCellDef> Phone </th>
+                <td mat-cell *matCellDef="let element"> {{element.phone}} </td>
+            </ng-container>
 
-    <!-- Address -->
-    <ng-container matColumnDef="address">
-        <th mat-header-cell *matHeaderCellDef> Address </th>
-        <td mat-cell *matCellDef="let element"> {{element.address}} </td>
-    </ng-container>
+            <!-- Address -->
+            <ng-container matColumnDef="address">
+                <th mat-header-cell *matHeaderCellDef> Address </th>
+                <td mat-cell *matCellDef="let element"> {{element.address}} </td>
+            </ng-container>
 
-    <!-- City -->
-    <ng-container matColumnDef="city">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> City </th>
-        <td mat-cell *matCellDef="let element"> {{element.city}} </td>
-    </ng-container>
+            <!-- City -->
+            <ng-container matColumnDef="city">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> City </th>
+                <td mat-cell *matCellDef="let element"> {{element.city}} </td>
+            </ng-container>
 
 
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-</table>
-<mat-paginator [pageSize]="5" [pageSizeOptions]="[5, 10, 25, 100]">
-</mat-paginator>
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+        <mat-paginator [pageSize]="5" [pageSizeOptions]="[5, 10, 25, 100]">
+        </mat-paginator>
     </div>
 </div>

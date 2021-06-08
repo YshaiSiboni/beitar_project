@@ -19,3 +19,7 @@ mat-sidenav {
 mat-toolbar-row .bjLogo {
 width: 7%;
 }
+
+mat-sidenav-container {
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/beitar-1936.appspot.com/o/teddy1.jpg?alt=media&token=49123895-6344-4891-9011-ddb110f70c7f");
+}

@@ -1,6 +1,3 @@
-.grid-container {
-  background-image: url("https://firebasestorage.googleapis.com/v0/b/beitar-1936.appspot.com/o/teddy1.jpg?alt=media&token=49123895-6344-4891-9011-ddb110f70c7f");
-}
 
 .dashboard-card {
   position: absolute;
@@ -25,15 +22,4 @@
   font-family: 'Trebuchet MS', sans-serif;
   font-weight: bold;
   font-size: 35px;
-}
-
-.img-container {
-  position: relative;
-  text-align: left;
-}
-
-.img-container .stadiumWall {
-  width: 100%;
-  height: 100vh;
-  opacity: 0.7;
 }
