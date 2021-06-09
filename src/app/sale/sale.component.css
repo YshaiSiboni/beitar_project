@@ -59,3 +59,8 @@ form{
   flex-basis: 150px;
   margin-right: 15px;
 }
+
+mat-spinner {
+  display: inline;
+  vertical-align:middle;
+}

@@ -50,6 +50,9 @@ import { DashHomeComponent } from './dash-home/dash-home.component';
 import { CardComponent } from './card/card.component';
 import { TableDayComponent } from './table-day/table-day.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { PurchaseDialogComponent } from './purchase-dialog/purchase-dialog.component';
+
 
 @NgModule({
   declarations: [
@@ -65,7 +68,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     BarChartMonthComponent,
     DashHomeComponent,
     CardComponent,
-    TableDayComponent
+    TableDayComponent,
+    PurchaseDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -100,7 +104,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatMenuModule,
     NgxChartsModule,
     MatGridListModule,
-    MatDialogModule
+    MatDialogModule,
+    MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

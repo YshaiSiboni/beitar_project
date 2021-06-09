@@ -1,13 +1,26 @@
-table {
+table{
     width:100%;
     table-layout: fixed;
     overflow-wrap: break-word;
 }
-    
-th.mat-sort-header-sorted {
-    color: black;
+
+.mat-h1 {
+    color: #E6DB00;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
 }
 
+.close-button{
+    float: right;
+    top:-24px;
+    right:-24px;
+  }
+
+.close-icon {
+    background-color: transparent;
+}
+  
 @media only screen and (max-width:500px){
     .mat-table {
       border:5;
@@ -21,4 +34,4 @@ th.mat-sort-header-sorted {
     .mat-header-cell {
       font-weight: bold;
     }
-  }
+}

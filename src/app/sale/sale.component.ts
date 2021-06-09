@@ -26,6 +26,7 @@ export class SaleComponent implements OnInit {
   docDict = {3: "מס", 9:"מס - קבלה"};
   ownerDict = {3741: "בית וגן", 3480: "חנות אינטרנט", 3740: "טדי מערבי", 3739: "טדי מזרחי", 3841: "בית וגן"};
 
+  dataLoaded = false;
 
   filterForm = new FormGroup({
     fromDate: new FormControl(),
@@ -77,7 +78,7 @@ export class SaleComponent implements OnInit {
         this.sort.sort(({ id: 'issue_date', start: 'desc'}) as MatSortable);
         this.dataSource.sort = this.sort;
         console.log(this.dataSource);
-        console.log(this.dataSource.data);
+        this.dataLoaded = true;
       }
     )
   }
