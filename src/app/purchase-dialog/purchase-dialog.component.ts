@@ -16,6 +16,13 @@ export class PurchaseDialogComponent implements OnInit {
   constructor(public dialogRef: MatDialogRef<TableDayComponent>,
     @Inject(MAT_DIALOG_DATA) public data) { }
     
+  calcSum() {
+    var sum=0;
+    for(var i =0; i < this.data.length; i++){
+      sum = sum + Number(this.data[i].iTotalVat);
+    }
+    return sum;
+  }
 
   onNoClick(): void {
     this.dialogRef.close();
@@ -23,6 +30,7 @@ export class PurchaseDialogComponent implements OnInit {
   
   ngOnInit(): void {
     console.log(this.data);
+    console.log(this.calcSum());
   }
   
 

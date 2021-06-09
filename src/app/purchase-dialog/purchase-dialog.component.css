@@ -20,6 +20,10 @@ table{
 .close-icon {
     background-color: transparent;
 }
+
+tr.mat-footer-row {
+  font-weight: bold;
+}
   
 @media only screen and (max-width:500px){
     .mat-table {
