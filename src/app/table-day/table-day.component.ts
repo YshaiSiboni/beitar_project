@@ -36,12 +36,16 @@ export class TableDayComponent implements OnInit {
       data: purchase
     });
     dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
+      console.log('This Purchase Details was closed');
     });
   }
 
-
-
+  /*checkFive() {
+    this.saleCompareDaysService.getSale().subscribe((data) => {
+      let dataTime = data.map(data => [data.issue_date]);
+      console.log(dataTime);
+    })
+  }*/
  /* getDetails(index) {
     this.saleCompareDaysService.getSale().subscribe((results) => {
       let data = results[index];

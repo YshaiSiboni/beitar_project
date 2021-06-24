@@ -7,6 +7,8 @@ import { DatePipe, formatDate } from '@angular/common';
 import { FormControl, FormGroup } from '@angular/forms';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort, MatSortable } from '@angular/material/sort';
+import { MatDialog } from '@angular/material/dialog';
+import { FullPurchaseDialogComponent } from '../full-purchase-dialog/full-purchase-dialog.component';
 
 @Component({
   selector: 'app-sale',
@@ -17,7 +19,7 @@ export class SaleComponent implements OnInit {
 
   resp;
   ELEMENT_DATA: SaleByCustomer[] = [];
-  displayedColumns: string[] = ['doctype','owner','company', 'issue_date', 'total'];
+  displayedColumns: string[] = ['doctype','owner','company', 'issue_date', 'total', 'details'];
   dataSource = new MatTableDataSource<SaleByCustomer>(this.ELEMENT_DATA);
   @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
   @ViewChild(MatSort,{static:true}) sort:MatSort;
@@ -36,7 +38,7 @@ export class SaleComponent implements OnInit {
   get fromDate() { return this.filterForm.get('fromDate'); }
   get toDate() { return this.filterForm.get('toDate'); }
 
-  constructor(private saleService: SaleService) {
+  constructor(private saleService: SaleService, public dialog:MatDialog) {
     this.pipe = new DatePipe('en');
     console.log(this.dataSource.filterPredicate);
     const defaultPredicate = this.dataSource.filterPredicate;
@@ -65,6 +67,18 @@ export class SaleComponent implements OnInit {
 
   applyFilter(filterValue: string) {
     this.dataSource.filter = filterValue.trim().toLowerCase();
+  }
+
+  purchase: SaleByCustomer[]=[]
+
+  openDialog(purchase): void {
+    // this.purchase = purchase;
+    let dialogRef = this.dialog.open(FullPurchaseDialogComponent, {
+      data: purchase
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('This Purchase Details was closed');
+    });
   }
 
   ngOnInit(): void {

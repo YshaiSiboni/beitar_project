@@ -30,7 +30,7 @@
         <td mat-cell *matCellDef="let element"> {{element.total | currency:"ILS":"symbol"}} </td>
     </ng-container>
 
-    Details Column 
+    <!--Details Column -->
     <ng-container matColumnDef="details">
         <th mat-header-cell *matHeaderCellDef> Details </th>
         <td mat-cell *matCellDef="let element; let i = index"><button (click)= "openDialog(element.docDetailes)" mat-stroked-button color="primary">Get All</button>

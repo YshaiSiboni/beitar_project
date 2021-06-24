@@ -1,0 +1,41 @@
+table{
+    width:100%;
+    table-layout: fixed;
+    overflow-wrap: break-word;
+}
+
+.mat-h1 {
+    color: #E6DB00;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.close-button{
+    float: right;
+    top:-24px;
+    right:-24px;
+  }
+
+.close-icon {
+    background-color: transparent;
+}
+
+tr.mat-footer-row {
+  font-weight: bold;
+}
+  
+@media only screen and (max-width:500px){
+    .mat-table {
+      border:5;
+      vertical-align: middle;
+    }
+    .mat-cell {
+      font-size: 11px;
+      padding-right: 10px;
+    }
+  
+    .mat-header-cell {
+      font-weight: bold;
+    }
+}

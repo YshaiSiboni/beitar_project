@@ -25,6 +25,7 @@
     "@angular/router": "~10.2.0",
     "@swimlane/ngx-charts": "^18.0.1",
     "firebase": "^7.0 || ^8.0",
+    "mat-table-exporter": "^10.2.3",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"

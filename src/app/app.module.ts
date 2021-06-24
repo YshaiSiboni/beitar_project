@@ -52,7 +52,8 @@ import { TableDayComponent } from './table-day/table-day.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { PurchaseDialogComponent } from './purchase-dialog/purchase-dialog.component';
-
+import { MatTableExporterModule } from 'mat-table-exporter';
+import { FullPurchaseDialogComponent } from './full-purchase-dialog/full-purchase-dialog.component';
 
 @NgModule({
   declarations: [
@@ -69,7 +70,8 @@ import { PurchaseDialogComponent } from './purchase-dialog/purchase-dialog.compo
     DashHomeComponent,
     CardComponent,
     TableDayComponent,
-    PurchaseDialogComponent
+    PurchaseDialogComponent,
+    FullPurchaseDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -105,7 +107,8 @@ import { PurchaseDialogComponent } from './purchase-dialog/purchase-dialog.compo
     NgxChartsModule,
     MatGridListModule,
     MatDialogModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatTableExporterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
