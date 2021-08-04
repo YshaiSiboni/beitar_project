@@ -10,6 +10,7 @@ import { AuthService } from '../auth.service';
   styleUrls: ['./nav.component.css']
 })
 export class NavComponent {
+  anio: number = new Date().getFullYear();
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(

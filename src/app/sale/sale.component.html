@@ -34,7 +34,7 @@
       <button mat-button class="refresh" [routerLink]="['/sales']" (click)="refreshTable()">Reset</button>
     </form>
     <mat-spinner *ngIf="!dataLoaded" diameter="70"></mat-spinner>
-    <table mat-table matTableExporter [dataSource]="dataSource" #exporter="matTableExporter" [hiddenColumns]="[0]"
+    <table mat-table matTableExporter [dataSource]="dataSource" #exporter="matTableExporter" [hiddenColumns]="[0,5]"
       class="mat-elevation-z8" matSort>
 
       <!-- DocType Column -->
