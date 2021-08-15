@@ -50,6 +50,12 @@ form{
   margin: 5px;
 }
 
+.dbupdate{
+  background: rgb(10, 167, 10);
+  color: white;
+  margin: 5px;
+}
+
 
 .date-block{
   display: flex;

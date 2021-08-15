@@ -1,13 +1,14 @@
 import { formatDate } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SaleTodayService {
 
-  private URL = "https://app.linet.org.il/api/docsearch/docs";
+  private URL = environment.linetProxy;
 
   getSale() {
     let today = formatDate( new Date(),'yyyy-MM-dd','en-US');

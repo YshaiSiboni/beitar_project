@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { environment } from 'src/environments/environment';
 
 
 @Injectable({
@@ -10,7 +11,7 @@ import { map } from 'rxjs/operators';
 export class AccountService {
   
 
-  private URL = "https://app.linet.org.il/api/newsearch/accounts";
+  private URL = `${environment.linetBaseUrl}newsearch/accounts`;
 
   getAccount() {
     let json = {    "login_id": "g69Y1M_5JXnNACN8HdJ8CrGh0774XP-a",

@@ -1,5 +1,7 @@
 export const environment = {
   production: true,
+  linetBaseUrl: 'https://app.linet.org.il/api/',
+  linetProxy: 'http://',
   firebaseConfig : {
     apiKey: "AIzaSyDunmYbSUHXgDHjb5TDicFQN96eailR5zk",
     authDomain: "beitar-1936.firebaseapp.com",

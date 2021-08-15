@@ -4,13 +4,14 @@ import { Injectable } from '@angular/core';
 import { map } from 'rxjs/operators';
 import { formatDate } from '@angular/common';
 import { AngularFirestore } from '@angular/fire/firestore';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SaleService {
 
-  private URL = "https://app.linet.org.il/api/docsearch/docs";
+  private URL = environment.linetProxy;
 
   getSale() {
     let first = new Date(new Date().getFullYear(), 0, 1);
