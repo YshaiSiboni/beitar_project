@@ -1,4 +1,5 @@
 export interface SaleByCustomer {
+    id: number;
     account_id: number;
     doctype: number;
     owner?: number;

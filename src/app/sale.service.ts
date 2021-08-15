@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map } from 'rxjs/operators';
 import { formatDate } from '@angular/common';
+import { AngularFirestore } from '@angular/fire/firestore';
 
 @Injectable({
   providedIn: 'root'
@@ -28,5 +29,11 @@ export class SaleService {
     return this.http.post<any>(this.URL, body)
   }
 
-  constructor(private http: HttpClient) { }
+  addSale(id:number,company:string,doctype:number,owner:number,date:Date,total:number){
+    const sale = {company:company,owner:owner,doctype:doctype,date:date,total:total};
+    this.db.doc(`sales/${id}`).set(sale);
+  }
+
+
+  constructor(private http: HttpClient, private db:AngularFirestore) { }
 }

@@ -81,6 +81,14 @@ export class SaleComponent implements OnInit {
     });
   }
 
+  update(){
+    for(let i in this.dataSource.data){
+      this.saleService.addSale(this.dataSource.data[i].id,this.dataSource.data[i].company,this.docDict[this.dataSource.data[i].doctype],this.ownerDict[this.dataSource.data[i].owner],this.dataSource.data[i].issue_date,
+        this.dataSource.data[i].total);
+    }
+  }
+
+
   ngOnInit(): void {
   }
 
