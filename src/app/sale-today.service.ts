@@ -12,7 +12,7 @@ export class SaleTodayService {
 
   getSale() {
     let today = formatDate( new Date(),'yyyy-MM-dd','en-US');
-    //console.log(today);
+    console.log(today);
     let json = {
       "login_id": "g69Y1M_5JXnNACN8HdJ8CrGh0774XP-a",
       "login_hash": "IbcLOnlWWclb2eb0Df4qxwdF_LiTfRjD",

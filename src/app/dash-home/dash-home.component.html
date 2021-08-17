@@ -13,13 +13,13 @@
       </app-card>
     </mat-grid-tile>
     <mat-grid-tile [colspan]="( cardLayout | async )?.chart.cols" [rowspan]="( cardLayout | async )?.chart.rows">
-      <app-card title="Quantity of Sales in each Store (last 4 month)">
+      <app-card title="Quantity of Sales in each Store Monthly">
         <app-bar-chart></app-bar-chart>
       </app-card>
     </mat-grid-tile>
     <mat-grid-tile [colspan]="( cardLayout | async )?.chart.cols" [rowspan]="( cardLayout | async )?.chart.rows">
-      <app-card title="Monthly Revenue (last 4 month)">
-        <app-pie-chart></app-pie-chart>
+      <app-card title="Quantity of Sales in each Store Daily">
+        <app-bar-chart-daily></app-bar-chart-daily>
       </app-card>
     </mat-grid-tile>
     <!--Table-->

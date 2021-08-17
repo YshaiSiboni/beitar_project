@@ -9,26 +9,25 @@ import { environment } from 'src/environments/environment';
 @Injectable({
   providedIn: 'root'
 })
-export class SaleService {
+export class SaleMonthService {
 
   private URL = environment.linetProxy;
 
   getSale() {
-    //let first = new Date(new Date().getFullYear(), 0, 1);
-    //let last = new Date(new Date().getFullYear(), 11, 31);
     let date = new Date();
-    let first = new Date(date.getFullYear(), date.getMonth() - 3, 1);
-    let firstDay = formatDate(first, 'yyyy-MM-dd','en-US');
-    let lastDay = formatDate( new Date(),'yyyy-MM-dd','en-US');
+    let firstMonth = new Date(date.getFullYear(), date.getMonth(), 1);
+    let lastMonth = new Date(date.getFullYear(), date.getMonth() + 1, 0);
+    let finalFirstMonth = formatDate(firstMonth, 'yyyy-MM-dd','en-US');
+    let finalLastMonth = formatDate(lastMonth, 'yyyy-MM-dd','en-US');
     let json = {
       "login_id": "g69Y1M_5JXnNACN8HdJ8CrGh0774XP-a",
       "login_hash": "IbcLOnlWWclb2eb0Df4qxwdF_LiTfRjD",
       "login_company": "2",
-      "query": {"doctype":[3,9], "refstatus":[0,1], "issue_date":`${firstDay} to ${lastDay}`}
+      "query": {"doctype":[3,9], "refstatus":[0,1], "issue_date":`${finalFirstMonth} to ${finalLastMonth}`}
     }
     let body = JSON.stringify(json); //text to input in internet
-    //console.log(firstDay);
-    //console.log(lastDay);
+    //console.log(finalFirstMonth);
+    //console.log(finalLastMonth);
     return this.http.post<any>(this.URL, body)
   }
 
@@ -40,3 +39,4 @@ export class SaleService {
 
   constructor(private http: HttpClient, private db:AngularFirestore) { }
 }
+

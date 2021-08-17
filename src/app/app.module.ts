@@ -54,6 +54,7 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { PurchaseDialogComponent } from './purchase-dialog/purchase-dialog.component';
 import { MatTableExporterModule } from 'mat-table-exporter';
 import { FullPurchaseDialogComponent } from './full-purchase-dialog/full-purchase-dialog.component';
+import { BarChartDailyComponent } from './bar-chart-daily/bar-chart-daily.component';
 
 @NgModule({
   declarations: [
@@ -71,7 +72,8 @@ import { FullPurchaseDialogComponent } from './full-purchase-dialog/full-purchas
     CardComponent,
     TableDayComponent,
     PurchaseDialogComponent,
-    FullPurchaseDialogComponent
+    FullPurchaseDialogComponent,
+    BarChartDailyComponent
   ],
   imports: [
     BrowserModule,

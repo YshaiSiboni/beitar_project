@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { SaleMonthService } from '../sale-month.service';
+import { SaleTodayService } from '../sale-today.service';
 
 @Component({
-  selector: 'app-bar-chart',
-  templateUrl: './bar-chart.component.html',
-  styleUrls: ['./bar-chart.component.css']
+  selector: 'app-bar-chart-daily',
+  templateUrl: './bar-chart-daily.component.html',
+  styleUrls: ['./bar-chart-daily.component.css']
 })
-export class BarChartComponent implements OnInit {
-  
+export class BarChartDailyComponent implements OnInit {
+
   countA = 0; // Internet Shop - 3480
   countB = 0; // Bait Vegan Shop - 3741 or 3841
   countC = 0; // Teddy East - 3739
@@ -17,16 +17,16 @@ export class BarChartComponent implements OnInit {
   dataReceived = false;
 
   colorScheme = {
-    domain: ['#E74C3C', '#F4D03F ', '#58D68D', '#2874A6']
+    domain: ['#F4D03F ', '#58D68D', '#E74C3C', '#2874A6']
   };
 
-  constructor(private saleMonthService: SaleMonthService) { }
+  constructor(private saleTodayService: SaleTodayService) { }
 
   ngOnInit(): void {
   }
 
   ngAfterViewInit() {
-    this.saleMonthService.getSale().subscribe(
+    this.saleTodayService.getSale().subscribe(
       data => {
         console.log(data);
         let owner = data['body'].map(data => data.owner)
@@ -52,12 +52,8 @@ export class BarChartComponent implements OnInit {
           { name: "Teddy West", value: this.countD },
         )
         this.dataReceived = true;
-        //console.log(owner);
-        //console.log(this.countA);
-        //console.log(this.countB);
         console.log(this.ownerCount);
         console.log(this.dataReceived);
-        //console.log(this.saleData);
       }
     )
   }
